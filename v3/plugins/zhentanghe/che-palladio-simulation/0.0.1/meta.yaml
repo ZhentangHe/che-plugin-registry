@@ -1,0 +1,88 @@
+apiVersion: v2
+publisher: ZhentangHe
+name: che-palladio-simulation
+version: latest
+type: Theia Plugin
+displayName: Che Palladio Simulation
+title: Palladio Simulation
+description: This extension provedes an interface to run palladio simulation in eclipse che.
+# icon:                  # link to SVG icon
+repository: https://github.com/ZhentangHe/palladio-simulation-che.git
+category: Other
+# firstPublicationDate:  # optional; see [2]
+# latestUpdateDate:      # optional; see [3]
+# deprecate:             # optional; section for deprecating plugins in favor of others
+#   autoMigrate:         # boolean
+#   migrateTo:           # new org/plugin-id/version, e.g. redhat/vscode-apache-camel/latest
+# spec:                  # spec (used to be che-plugin.yaml)
+#   endpoints:           # optional; plugin endpoints -- see https://www.eclipse.org/che/docs/che-6/servers.html for more details
+#     - name:
+#       public:            # if true, endpoint is exposed publicly
+#       targetPort:
+#       attributes:
+#         protocol:        # protocol used for communicating over endpoint, e.g. 'ws' or 'http'
+#         secure:          # use secure version of protocol above; convert 'ws' -> 'wss', 'http' -> 'https'
+#         discoverable:    # if false, no k8s service is created for this endpoint
+#         cookiesAuthEnabled: # if true, endpoint is exposed through JWTProxy
+#         type:
+#         path:
+#   containers:          # optional; sidecar containers for plugin
+#     - image:
+#       name:              # name used for sidecar container
+#       memorylimit:       # Kubernetes/OpenShift-spec memory limit string (e.g. "512Mi")
+#       env:               # list of env vars to set in sidecar
+#         - name:
+#           value:
+#       command:           # optional; definition of root process command inside container
+#         - /bin/sh
+#       args:              # optional; list arguments for root process command inside container
+#         - -c
+#         - ./entrypoint.sh
+#       volumes:           # volumes required by plugin
+#         - mountPath:
+#           name:
+#           ephemeral: # boolean; if true volume will be ephemeral, otherwise volume will be persisted
+#       ports:             # ports exposed by plugin (on the container)
+#         - exposedPort:
+#       commands:          # development commands available to plugin container
+#         - name:
+#           workingDir:
+#           command:       # list of commands + arguments, e.g.:
+#             - rm
+#             - -rf
+#             - /cache/.m2/repository
+#       mountSources:      # boolean
+#   initContainers:      # optional; init containers for sidecar plugin
+#     - image:
+#       name:              # name used for sidecar container
+#       memorylimit:       # Kubernetes/OpenShift-spec memory limit string (e.g. "512Mi")
+#       env:               # list of env vars to set in sidecar
+#         - name:
+#           value:
+#       command:           # optional; definition of root process command inside container
+#         - /bin/sh
+#       args:              # optional; list arguments for root process command inside container
+#         - -c
+#         - ./entrypoint.sh
+#       volumes:           # volumes required by plugin
+#         - mountPath:
+#           name:
+#           ephemeral: # boolean; if true volume will be ephemeral, otherwise volume will be persisted
+#       ports:             # ports exposed by plugin (on the container)
+#         - exposedPort:
+#       commands:          # development commands available to plugin container
+#         - name:
+#           workingDir:
+#           command:       # list of commands + arguments, e.g.:
+#             - rm
+#             - -rf
+#             - /cache/.m2/repository
+#       mountSources:      # boolean
+#   workspaceEnv:        # optional; env vars for the workspace
+#     - name:
+#       value:
+#   extensions:            # optional; required for VS Code/Theia plugins; list of urls to plugin artifacts (.vsix/.theia files) -- examples follow
+#     - https://github.com/Azure/vscode-kubernetes-tools/releases/download/0.1.17/vscode-kubernetes-tools-0.1.17.vsix # example
+#     - vscode:extension/redhat.vscode-xml # example
+#     - https://github.com/redhat-developer/omnisharp-theia-plugin/releases/download/v0.0.1/omnisharp_theia_plugin.theia # example
+#     - relative:extension/resources/java-0.46.0-1549.vsix # example; see [4]
